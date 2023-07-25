@@ -1,0 +1,13 @@
+FROM golang:latest
+
+COPY ./any-sync-node /any-sync-node
+
+WORKDIR /any-sync-node
+
+RUN apt install -y make
+
+RUN make deps
+
+RUN make build
+
+CMD /any-sync-node/bin/any-sync-node

@@ -1,0 +1,17 @@
+networkId: N6bswjmPBMHT5qbbw8B6qosay3PRnKQaLgbzWNtLg2612SUv
+nodes:
+    - peerId: 12D3KooWQz9obrs5eGLsgUiNNtBxX7PNUngMkbwxM4CPYwTgYnK2
+      addresses:
+        - coordinator:4830
+      types:
+        - coordinator
+    - peerId: 12D3KooWJvN8qkSZRdAs2ne7JFMLaWYXmmEj5KB897TYo9UYpiYs
+      addresses:
+        - syncnode:4430
+      types:
+        - tree
+    - peerId: 12D3KooWMqpoe6cj54vSGafm3fLW2TYdTsiiWn6k2VQ85GR1J9qp
+      addresses:
+        - filenode:4730
+      types:
+        - file

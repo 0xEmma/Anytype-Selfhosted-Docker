@@ -1,0 +1,39 @@
+account:
+    peerId: 12D3KooWQz9obrs5eGLsgUiNNtBxX7PNUngMkbwxM4CPYwTgYnK2
+    peerKey: qK9t6SewEfRi1GUWkTvMY53dw2OpK+LhgrzFiXqyM+/hYSGhd9Thz1DK1EtjO1OXIxffIsoYU7/RtOsxmwh08Q==
+    signingKey: XJklh+FyDIOK/EOzjL0zJFamN1kLkQlzkCorhID9mGxuW1lDN3ZHnPMn5abyMmFhI+NvC4ImZafGvx2hFvM28g==
+drpc:
+    stream:
+        maxMsgSizeMb: 256
+yamux:
+    listenAddrs:
+        - coordinator:4830
+    writeTimeoutSec: 10
+    dialTimeoutSec: 10
+network:
+    id: 64c0570692d3a59fc88daf91
+    networkId: N6bswjmPBMHT5qbbw8B6qosay3PRnKQaLgbzWNtLg2612SUv
+    nodes:
+        - peerId: 12D3KooWQz9obrs5eGLsgUiNNtBxX7PNUngMkbwxM4CPYwTgYnK2
+          addresses:
+            - coordinator:4830
+          types:
+            - coordinator
+        - peerId: 12D3KooWJvN8qkSZRdAs2ne7JFMLaWYXmmEj5KB897TYo9UYpiYs
+          addresses:
+            - syncnode:4430
+          types:
+            - tree
+        - peerId: 12D3KooWMqpoe6cj54vSGafm3fLW2TYdTsiiWn6k2VQ85GR1J9qp
+          addresses:
+            - filenode:4730
+          types:
+            - file
+    creationTime: 2023-07-25T19:13:10.1578684-04:00
+networkStorePath: .
+mongo:
+    connect: mongodb://mongodb:27017
+    database: coordinator
+spaceStatus:
+    runSeconds: 20
+    deletionPeriodDays: 1

@@ -1,0 +1,48 @@
+account:
+    peerId: 12D3KooWJvN8qkSZRdAs2ne7JFMLaWYXmmEj5KB897TYo9UYpiYs
+    peerKey: yIPoiFScBy3zi9HEC+XJrLA+pYKspjaaOKzaxPPiKPOHQqFNmCzucFoY7UPu+tZBGGDAS0C/bVCin8peDZKsJA==
+    signingKey: yIPoiFScBy3zi9HEC+XJrLA+pYKspjaaOKzaxPPiKPOHQqFNmCzucFoY7UPu+tZBGGDAS0C/bVCin8peDZKsJA==
+drpc:
+    stream:
+        maxMsgSizeMb: 256
+yamux:
+    listenAddrs:
+        - syncnode:4430
+    writeTimeoutSec: 10
+    dialTimeoutSec: 10
+network:
+    id: 64c0570692d3a59fc88daf91
+    networkId: N6bswjmPBMHT5qbbw8B6qosay3PRnKQaLgbzWNtLg2612SUv
+    nodes:
+        - peerId: 12D3KooWQz9obrs5eGLsgUiNNtBxX7PNUngMkbwxM4CPYwTgYnK2
+          addresses:
+            - coordinator:4830
+          types:
+            - coordinator
+        - peerId: 12D3KooWJvN8qkSZRdAs2ne7JFMLaWYXmmEj5KB897TYo9UYpiYs
+          addresses:
+            - syncnode:4430
+          types:
+            - tree
+        - peerId: 12D3KooWMqpoe6cj54vSGafm3fLW2TYdTsiiWn6k2VQ85GR1J9qp
+          addresses:
+            - filenode:4730
+          types:
+            - file
+    creationTime: 2023-07-25T19:13:10.1578684-04:00
+networkStorePath: .
+networkUpdateIntervalSec: 600
+space:
+    gcTTL: 60
+    syncPeriod: 240
+storage:
+    path: db
+nodeSync:
+    hotSync:
+        simultaneousRequests: 400
+    syncOnStart: true
+    periodicSyncHours: 2
+log:
+    production: false
+    defaultLevel: ""
+    namedLevels: {}

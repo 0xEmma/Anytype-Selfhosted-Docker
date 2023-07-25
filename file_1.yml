@@ -1,0 +1,42 @@
+account:
+    peerId: 12D3KooWMqpoe6cj54vSGafm3fLW2TYdTsiiWn6k2VQ85GR1J9qp
+    peerKey: 9gSnu8TRcmKdivddHte8rhbCvrNkS3SW9ng7SUQ4m5ayq/EGQ9M/9I+1rRIqkCOox2xpUV1SnOWK2PLnQyoElw==
+    signingKey: 9gSnu8TRcmKdivddHte8rhbCvrNkS3SW9ng7SUQ4m5ayq/EGQ9M/9I+1rRIqkCOox2xpUV1SnOWK2PLnQyoElw==
+drpc:
+    stream:
+        maxMsgSizeMb: 256
+yamux:
+    listenAddrs:
+        - filenode:4730
+    writeTimeoutSec: 10
+    dialTimeoutSec: 10
+network:
+    id: 64c0570692d3a59fc88daf91
+    networkId: N6bswjmPBMHT5qbbw8B6qosay3PRnKQaLgbzWNtLg2612SUv
+    nodes:
+        - peerId: 12D3KooWQz9obrs5eGLsgUiNNtBxX7PNUngMkbwxM4CPYwTgYnK2
+          addresses:
+            - coordinator:4830
+          types:
+            - coordinator
+        - peerId: 12D3KooWJvN8qkSZRdAs2ne7JFMLaWYXmmEj5KB897TYo9UYpiYs
+          addresses:
+            - syncnode:4430
+          types:
+            - tree
+        - peerId: 12D3KooWMqpoe6cj54vSGafm3fLW2TYdTsiiWn6k2VQ85GR1J9qp
+          addresses:
+            - filenode:4730
+          types:
+            - file
+    creationTime: 2023-07-25T19:13:10.1578684-04:00
+networkStorePath: .
+networkUpdateIntervalSec: 600
+s3Store:
+    region: us-east-1
+    profile: default
+    bucket: any-sync-files
+    maxThreads: 16
+redis:
+    isCluster: false
+    url: redis://redis:6379/?dial_timeout=3&db=1&read_timeout=6s&max_retires=2

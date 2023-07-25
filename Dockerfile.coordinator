@@ -1,0 +1,13 @@
+FROM golang:latest
+
+COPY ./any-sync-coordinator /any-sync-coordinator
+
+WORKDIR /any-sync-coordinator
+
+RUN apt install -y make
+
+RUN make deps
+
+RUN make build
+
+CMD /any-sync-coordinator/bin/any-sync-coordinator
